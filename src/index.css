@@ -2,5 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-html { scroll-behavior: smooth; }
-body { background: #08090c; color: #eceef2; }
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  body {
+    background-color: #08090c;
+    color: #eceef2;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  ::selection {
+    background-color: rgba(217, 164, 65, 0.35);
+    color: #ffffff;
+  }
+
+  /* Custom sleek scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #090a0e;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #252834;
+    border-radius: 4px;
+    border: 2px solid #090a0e;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d9a441;
+  }
+}
